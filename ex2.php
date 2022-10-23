@@ -1,6 +1,6 @@
 <?php
 
-function run(string $string)
+function run(string $string): array
 {
     //Ajoutez du code dans cette fonction
 }
@@ -8,7 +8,7 @@ function run(string $string)
 function main($argc, $argv)
 {
     if ($argc != 2) {
-        print("Il doit y avoir 1 argument");
+        fwrite(STDERR, "Il doit y avoir 1 argument");
         exit(1);
     }
     $result = run($argv[1]);

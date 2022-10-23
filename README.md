@@ -1,20 +1,28 @@
-# Php-Workshop-MultiDim-Array
+Php-Workshop-MultiDim-Array
+======================
 W@C Workshop Tableaux multidimensionels
 
 Ce workshop a pour but de vous faire utiliser des tableaux à multiples dimensions via 4 exercices.
+
+## **Table of contents**
+  - [Exercice 1 : phrase vers tableau de caractère](#exercice-1--phrase-vers-tableau-de-caractère)
+  - [Exercice 2 : phrase vers tableau de mot](#exercice-2--phrase-vers-tableau-de-mot)
+  - [Exercice 3 : phrase vers tableau de tableau caractère](#exercice-3--phrase-vers-tableau-de-tableau-caractère)
+  - [Exercice 4 : manipulation de tableau de tableau de caractère](#exercice-4--manipulation-de-tableau-de-tableau-de-caractère)
 
 > Pour ce workshop, nous partirons du principe qu'il n'y auras pas plus d'1 espace entre les mots. Cette gestion d'erreur n'est pas le but de ce workshop.
 
 > Pour chaque exercice, vous **devez** utiliser le fichier qui vous ait fournit et ajouter du code dans la fonction *run*. 
 
-### ex1 : string vers tableau de caractère
+## **Exercice 1 : phrase vers tableau de caractère**
 - **Fichier** : ex1.php
 
-Vous allez recevoir une chaîne de caractère en paramètre de votre programme.
+Vous allez recevoir une chaîne de caractère en argument de votre programme.
+
 Vous devrez transformer cette string en un tableau de caractère et retourner ce dernier.
 
 ```shell
-> php ex1.php "Multi 21 Seb, Multi 21"
+> php ex1.php "Multi 21 Seb"
 Array
 (
     [0] => M
@@ -29,24 +37,18 @@ Array
     [9] => S
     [10] => e
     [11] => b
-    [12] => ,
-    [13] =>
-    [14] => M
-    [15] => u
-    [16] => l
-    [17] => t
-    [18] => i
-    [19] => 
-    [20] => 2
-    [21] => 1
 )
 ```
 
-### ex2 : phrase vers tableau de mot
-Vous allez devoir récupérer chaque mot d'une phrase et les mettre dans un tableau
+## **Exercice 2 : phrase vers tableau de mot**
+- **Fichier** : ex2.php
+
+Vous allez recevoir une chaîne de caractère en argument de votre programme.
+
+Vous allez devoir récupérer chaque mot d'une phrase, les mettre dans un tableau et retourner ce dernier.
 
 ```shell
-> php ex2.php "Bonjour je suis dans la WebAcadmie"
+> php ex2.php "Bonjour je suis dans la WebAcadémie"
 Array
 (
     [0] => Bonjour
@@ -58,78 +60,93 @@ Array
 )
 ```
 
-### ex3 : phrase vers tableau de tableau caractère
-Comme pour l'exercice précédent, vous allez de voir récupérer chaque mot d'une phrase et les mettre dans un tableau. Et chaque caractère de ces mots va devoir être dans un tableau
+## **Exercice 3 : phrase vers tableau de tableau caractère**
+- **Fichier** : ex3.php
 
-> Pour cette exercice, nous partirons du principe qu'il n'y auras pas plus d'1 espace entre les mots
+Vous allez recevoir une chaîne de caractère en argument de votre programme.
+
+Vous allez créer un tableau qui vas contenir d'autre tableaux représentant chacun un mot de la string.
+
+Chacun de ces tableaux devras contenir tout les caractères des différents mots.
+
+Enfin, retourner le tableau contenant tout les mots. 
 
 ```shell
-> php index.php "Bonjour je suis dans la WebAcadmie"
+> php ex3.php "Love la W@C"
 Array
 (
     [0] => Array
         (
-            [0] => B
+            [0] => L
             [1] => o
-            [2] => n
-            [3] => j
-            [4] => o
-            [5] => u
-            [6] => r
+            [2] => v
+            [3] => e
         )
 
     [1] => Array
-        (
-            [0] => j
-            [1] => e
-        )
-
-    [2] => Array
-        (
-            [0] => s
-            [1] => u
-            [2] => i
-            [3] => s
-        )
-
-    [3] => Array
-        (
-            [0] => d
-            [1] => a
-            [2] => n
-            [3] => s
-        )
-
-    [4] => Array
         (
             [0] => l
             [1] => a
         )
 
-    [5] => Array
+    [2] => Array
         (
             [0] => W
-            [1] => e
-            [2] => b
-            [3] => A
-            [4] => c
-            [5] => a
-            [6] => d
-            [7] => e
-            [8] => m
-            [9] => i
-            [10] => e
+            [1] => @
+            [2] => C
         )
 
 )
 ```
-### ex4 : manipulation de tableau de tableau de caractère
-echanger les mots à la place indiqué en paramètre et rajouter une caractère en début de ligne
 
+## **Exercice 4 : manipulation de tableau de tableau de caractère**
+- **Fichier** : ex4.php
+
+> Copiez-collez la fonction *run* de votre exercice 3 dans la fonction *run* de votre exercice 4
+
+Vous allez recevoir un tableau contenant 2 nombres et une chaîne de caractère en argument de votre programme.
+
+Vous allez devoir échanger la position de 2 mots dans le tableau donné par le tableau en paramètres.
+
+En plus d'échanger la position dans le tableau de ces mots là, vous allez devoir rajouter le caractère '@' au début des mots déplacés.
 
 ```shell
-> php ex4.php [0, 2] "Bonjour je suis dans la WebAcademie"
+> php ex4.php "[0, 2]" "Vraiment un zoo ici"
+Array
+(
+    [0] => Array
+        (
+            [0] => @
+            [1] => z
+            [2] => o
+            [3] => o
+        )
 
+    [1] => Array
+        (
+            [0] => u
+            [1] => n
+        )
 
+    [2] => Array
+        (
+            [0] => @
+            [1] => V
+            [2] => r
+            [3] => a
+            [4] => i
+            [5] => m
+            [6] => e
+            [7] => n
+            [8] => t
+        )
 
+    [3] => Array
+        (
+            [0] => i
+            [1] => c
+            [2] => i
+        )
+
+)
 ```
